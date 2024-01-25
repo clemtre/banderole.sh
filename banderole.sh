@@ -1,6 +1,7 @@
 #!/bin/bash
 
 H_px=256
+# Hauteur imprimable sur un ticket de 80mm
 H_mm=68.5
 
 imprimer() 
@@ -11,6 +12,7 @@ convert -background white -fill black \
 		-font Junicode-CondLight.ttf label:"$1" \
         -rotate -180 \
       	$OUT
+
 # produit en croix
 L_px=$(identify -format "%[fx:w]" $OUT)
 L_mm=$(bc -l <<< "$L_px * $H_mm / $H_px")
@@ -20,11 +22,6 @@ lp $OUT -s \
     -o TmtSpeed=1 
 }
 
-#while true; do 
-    #read -n1 MESSAGE
-    #read MESSAGE
-    MESSAGE="Un outil pour écrire des banderoles sur ticket de caisse → https://git.vvvvvvaria.org/clemtre/banderole.sh · fonctionne sur mac, linux* & *bsd · license CC4r"
-    #MESSAGE=" (fonctionne sur mac, linux* & *bsd)"
-    imprimer "$MESSAGE"
-#done
+MESSAGE="Un outil pour écrire des banderoles sur ticket de caisse → https://git.vvvvvvaria.org/clemtre/banderole.sh · fonctionne sur mac, linux* & *bsd · license CC4r"
+imprimer "$MESSAGE"
 
