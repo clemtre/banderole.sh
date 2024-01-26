@@ -1,0 +1,39 @@
+english soon 
+
+       Un outil pour écrire des banderoles sur ticket de caisse.
+                   Fonctionne sur mac, linux* & *bsd 
+                              license CC4r
+
+         ____________________________________________________
+         >  |)   _,         _|   _  _.  _  |\  _   ,  |)     >
+         >  |/\_/ |  /|/|  / |  |/ / | / \_|/ |/  / \_|/\    >
+         >   \/ \/|_/ | |_/\/|_/|_/  |/\_/ |_/|_/o \/ |  |/  >
+         >___________________________________________________>
+                                                          
+
+On utilise le drapeau -label de la commande convert de image magick pour
+générer une image blanche aux dimensions du texte contenu dans la
+variable MESSAGE. 
+Ensuite, on calcule un produit en croix de l'image obtenu pour obtenir
+la longueur du ticket en millimètre à imprimer. 
+On envoie cette image à l'imprimante via la commande lp de
+l'utilitaire cups, en précisant les dimmensions calculées en millimètres
+
+dépendances :
+* image magick (Licence ImageMagick →
+  https://imagemagick.org/script/license.php) : un logiciel pour générer
+  et traiter une ou plusieurs images → https://imagemagick.org/
+* cups (Apache 2.0) : une interface pour communiquer avec des
+  imprimantes → https://openprinting.github.io/cups
+
+_______________________________________________________________________
+                           /!\ important /!\ 
+banderole.sh est fourni SANS imprimante thermique. Il est nécessaire
+d'avoir accès à un tel outil pour imprimer une banderole. J'utilise une
+Epson TM-T20II qui imprime jusqu'à 80mm de large et se branche en usb,
+il en existe pleins d'autres, il faut chiner...
+_______________________________________________________________________
+
+             Écrit à l'erg pendant la winterschool de 2024
+                        contact@martinlemaire.fr
+
