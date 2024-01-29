@@ -1,25 +1,23 @@
-english soon 
 
        Un outil pour écrire des banderoles sur ticket de caisse.
                    Fonctionne sur mac, linux* & *bsd 
                               license CC4r
-
-         ____________________________________________________
-         }  |)   _,         _|   _  _.  _  |\  _   ,  |)     {
-         {  |/\_/ |  /|/|  / |  |/ / | / \_|/ |/  / \_|/\    }
-         }   \/ \/|_/ | |_/\/|_/|_/  |/\_/ |_/|_/o \/ |  |/  {
-         {___________________________________________________}
-                                                          
+          ___________________________________________________ 
+         /  |)   _,         _|   _  _.  _  |\  _   ,  |)     \
+         \  |/\_/ |  /|/|  / |  |/ / | / \_|/ |/  / \_|/\    /
+         /  /\/ \/|_/ | |_/\/|_/|_/  |/\_/ |_/|_/o \/ |  |/  \
+         \___________________________________________________/
 
 On utilise le drapeau -label de la commande convert de image magick pour
-générer une image blanche aux dimensions du texte contenu dans la
-variable MESSAGE. 
-Ensuite, on calcule un produit en croix de l'image obtenu pour obtenir
-la longueur du ticket en millimètre à imprimer. 
-On envoie cette image à l'imprimante via la commande lp de
-l'utilitaire cups, en précisant les dimmensions calculées en millimètres
+générer le texte contenu dans la variable MESSAGE sur un fond blanc.
+L'image est enregistrée en png et est nommée en fonction du nombre de
+millisecondes écoulées depuis le 1er janvier 1970. (cf: heure Posix)
+Ensuite, on calcule un produit en croix de l'image obtenue pour avoir la
+longueur du ticket en millimètre à imprimer. 
+On envoie cette image à l'imprimante via la commande lp de l'utilitaire
+cups, en précisant les dimmensions calculées en millimètres.
 
-dépendances :
+Dépendances
 * image magick (Licence ImageMagick →
   https://imagemagick.org/script/license.php) : un logiciel pour générer
   et traiter une ou plusieurs images → https://imagemagick.org/
