@@ -1,37 +1,38 @@
 
-       Un outil pour écrire des banderoles sur ticket de caisse.
-                   Fonctionne sur mac, linux* & *bsd 
-                              license CC4r
+              A tool for writing banners on cash receipts.
+                     Works on mac, linux* and *bsd
+                              CC4r license
           ___________________________________________________ 
-         /  |)   _,         _|   _  _.  _  |\  _   ,  |)     \
+         /  |)   _,         _|   _  _.  _  |\  _   ,  |)  *  \
          \  |/\_/ |  /|/|  / |  |/ / | / \_|/ |/  / \_|/\    /
          /  /\/ \/|_/ | |_/\/|_/|_/  |/\_/ |_/|_/o \/ |  |/  \
-         \___________________________________________________/
+         \____________________________* banner, streamer ____/
+                                                
 
-On utilise le drapeau -label de la commande convert de image magick pour
-générer le texte contenu dans la variable MESSAGE sur un fond blanc.
-L'image est enregistrée en png et est nommée en fonction du nombre de
-secondes écoulées depuis le 1er janvier 1970. (cf: heure Posix)
-Ensuite, on calcule un produit en croix de l'image obtenue pour avoir la
-longueur du ticket en millimètre à imprimer. 
-On envoie cette image à l'imprimante via la commande lp de l'utilitaire
-cups, en précisant les dimmensions calculées en millimètres.
+We use the -label flag of the image magick convert command to
+generate the text contained in the MESSAGE variable on a white background.
+The image is saved as a png and is named according to the number of
+seconds passed since January 1, 1970. (see: Posix time)
+Then, we calculate a cross product of the image obtained to have the
+length of the ticket in millimeters to print.
+We send this image to the printer via the lp command of the utility
+cups, specifying the dimensions calculated in millimeters.
 
-Dépendances
+Dependencies
 * image magick (Licence ImageMagick →
-  https://imagemagick.org/script/license.php) : un logiciel pour générer
-  et traiter une ou plusieurs images → https://imagemagick.org/
-* cups (Apache 2.0) : une interface pour communiquer avec des
-  imprimantes → https://openprinting.github.io/cups
+  https://imagemagick.org/script/license.php): software to generate
+  and process one or more images → https://imagemagick.org/
+* cups (Apache 2.0): an interface to communicate with
+  printers → https://openprinting.github.io/cups
 
 _______________________________________________________________________
                            /!\ important /!\ 
-banderole.sh est fourni SANS imprimante thermique. Il est nécessaire
-d'avoir accès à un tel outil pour imprimer une banderole. J'utilise une
-Epson TM-T20II qui imprime jusqu'à 80mm de large et se branche en usb,
-il en existe pleins d'autres, il faut chiner...
+banderole.sh is supplied WITHOUT a thermal printer. It is necessary
+to have access to such a tool to print a banner. I use a
+Epson TM-T20II which prints up to 80mm wide and connects via USB,
+there are plenty of others, you have to hunt around...
 _______________________________________________________________________
 
-             Écrit à l'erg pendant la winterschool de 2024
+             Written at erg during the winterschool of 2024
                         contact@martinlemaire.fr
 
